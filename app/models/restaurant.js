@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-    restaurantId: DS.attr('long'),
+    restaurantId: DS.attr('int'),
     name: DS.attr('string'),
     rating: DS.attr('double'),
     phone: DS.attr('double'),
@@ -11,6 +11,7 @@ export default DS.Model.extend({
     image: DS.attr('string'),
 
     //Relations
-    coordinates: DS.belongsTo('coordinates'),
-    address: DS.belongsTo('address')
+    coordinates: DS.belongsTo('coordinates', {async: true}),
+    address: DS.belongsTo('address', {async: true}),
+    
 });
