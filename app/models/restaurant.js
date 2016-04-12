@@ -11,7 +11,7 @@ export default DS.Model.extend({
     image: DS.attr('string'),
 
     //Relations
-    coordinates: DS.belongsTo('coordinates', {async: true}),
-    address: DS.belongsTo('address', {async: true}),
-    
+    coordinates: DS.belongsTo('coordinates'),
+    address: DS.belongsTo('address'),
+
 });

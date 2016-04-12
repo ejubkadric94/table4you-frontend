@@ -5,5 +5,5 @@ export default DS.Model.extend({
     longitude: DS.attr("double"),
 
     //Relations
-    restaurant: DS.belongsTo('restaurant', {async: true})
+    restaurant: DS.belongsTo('restaurant')
 });

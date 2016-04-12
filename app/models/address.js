@@ -6,5 +6,5 @@ export default DS.Model.extend({
     country: DS.attr("string"),
 
     //Relations
-    restaurant: DS.belongsTo('restaurant', {async: true})
+    restaurant: DS.belongsTo('restaurant')
 });
