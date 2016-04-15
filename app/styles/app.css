@@ -1,4 +1,8 @@
 
-
-
+#restaurant{
+  border: 5px solid white;
+  background: #dddddd;
+  border-radius: 25px;
+  max-width: 280px;
+}
 

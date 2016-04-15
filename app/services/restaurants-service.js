@@ -5,7 +5,7 @@ export default base.extend({
     getRestaurant: function (id) {
         return this.ajax({
             method: 'GET',
-            url: '/v1/restaurants/'+id
+            url: '/v1/restaurants/'+id,
         });
     },
 
