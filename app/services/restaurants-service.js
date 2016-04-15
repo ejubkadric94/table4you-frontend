@@ -2,17 +2,17 @@ import base from './base-service';
 
 
 export default base.extend({
-    getRestaurants: function () {
+    getRestaurant: function (id) {
         return this.ajax({
             method: 'GET',
-            url: '/v1/restaurants'
+            url: '/v1/restaurants/'+id
         });
     },
 
-    getAllRestaurants() {
-        return this.ajax({
-            method: 'GET',
-            url: '/v1/restaurants',
-        });
-    },
+    getAllRestaurants: function() {
+      return this.ajax({
+        method: 'GET',
+        url: '/v1/restaurants',
+      });
+    }
 });
