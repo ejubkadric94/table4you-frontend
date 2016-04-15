@@ -6,7 +6,7 @@ export default base.extend({
     return this.ajax({
       method: 'POST',
       url: '/v1/login',
-      data: JSON.stringify({"email":email, "password":password}),
+      data: JSON.stringify({email:email, password:password}),
       contentType: "application/json",
       dataType: 'json',
     });
