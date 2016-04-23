@@ -20,14 +20,18 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-            <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search restaurant...">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <button type="button" class="btn btn-default navbar-btn navbar-right" >{{#link-to "register"}}Register{{/link-to}}</button>
-            <button type="button" class="btn btn-default navbar-btn navbar-right" >{{#link-to "login"}}Sign in{{/link-to}}</button>
+<!--
+
+-->
+
+
+          {{#unless base-service.currentUser}}
+              <button type="button" class="btn btn-default navbar-btn navbar-right" >{{#link-to "login"}}Sign in{{/link-to}}</button>
+              <button type="button" class="btn btn-default navbar-btn navbar-right" >{{#link-to "register"}}Sign up{{/link-to}}</button>
+          {{else}}
+              Hi {{base-service.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
+
+          {{/unless}}
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

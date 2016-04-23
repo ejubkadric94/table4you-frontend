@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label >Email:</label>
+      {{input type="email" class="form-control" value=emailReg placeholder="Email" required=true}}
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label >Password:</label>
+      {{input type="password" class="form-control" value=pwdReg placeholder="Password" required=true pattern=".{6,}"}}
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label >Password confirmation:</label>
+      {{input type="password" class="form-control" value=pwdConfirmation placeholder="Password confirmation" required=true pattern=".{6,}"}}
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label >First name:</label>
+      {{input type="text" class="form-control" value=firstName placeholder="First name" required=true maxlength=20}}
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+        <label >Last name:</label>
+      {{input type="text" class="form-control" value=lastName placeholder="Last name" required=true maxlength=20}}
+    </div><br>
+
+    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+        <label >Street name:</label>
+      {{input  type="text" class="form-control" value=streetName placeholder="Street name" required=true}}
+    </div>
+
+    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label >City:</label>
+      {{input type="text" class="form-control" value=city placeholder="City" required=true}}
+    </div>
+
+    <div class="form-group col-md-6">
+        <label >Country:</label>
+      {{input  type="text" class="form-control" value=country placeholder="Country" required=true}}
+    </div>
+
+    <div class="form-group col-md-8">
+        <label >Phone:</label>
+      {{input type="tel" class="form-control" value=tel placeholder="Phone" required=true pattern=".{6,}"}}
+    </div>
+
+    <div class="form-group col-md-8">
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" checked> Male
+        <input type="radio" name="gender" value="Female"> Female
+    </div>
+
+
+
+    <div class="form-group col-md-12">
+        <label for="day">Date of Birth (normal):</label>
+        <div id="date2" class="datefield">
+            <input id="day" type="tel" maxlength="2" placeholder="DD"/> /
+            <input id="month" type="tel" maxlength="2" placeholder="MM"/> /
+            <input id="year" type="tel" maxlength="4" placeholder="YYYY" />
+        </div>
+
+    </div>
+
+</div>
+{{yield}}
+
