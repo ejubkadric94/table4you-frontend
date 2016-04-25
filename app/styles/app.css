@@ -5,3 +5,66 @@
   max-width: 280px;
 }
 
+#signUpButton {
+  margin-right: 5px;
+}
+
+#signUpButton a:link {
+  color: white;
+}
+
+/* visited link */
+#signUpButton a:visited {
+  color: white;
+}
+
+/* mouse over link */
+#signUpButton a:hover {
+  color: white;
+}
+
+/* selected link */
+#signUpButton a:active {
+  color: white;
+}
+
+#signInButton a:link {
+  color: black;
+}
+
+/* visited link */
+#signInButton a:visited {
+  color: black;
+}
+
+/* mouse over link */
+#signInButton a:hover {
+  color: black;
+}
+
+/* selected link */
+#signInButton a:active {
+  color: black;
+}
+
+#logoutDropdown {
+  margin-top: 7px;
+}
+
+#signOutButton {
+  align-content: center;
+  align-items: center;
+}
+
+#topImage {
+  background-image: url("http://www.bluekamloops.ca/uploads/general/Blue_PromoVideoStillShots_Jan2014_02.jpg");
+  width: 100%;
+  min-height: 300px;
+  margin-top: 0px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: white;
+}
+

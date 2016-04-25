@@ -25,17 +25,22 @@
 -->
 
 
-          {{#unless base-service.currentUser}}
-              <button type="button" class="btn btn-default navbar-btn navbar-right" >{{#link-to "login"}}Sign in{{/link-to}}</button>
-              <button type="button" class="btn btn-default navbar-btn navbar-right" >{{#link-to "register"}}Sign up{{/link-to}}</button>
+          {{#if currentUser}}
+              <div class="dropdown navbar-right">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="logoutDropdown">Hi, {{currentUser.firstName}}
+                      <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                      <li id="signOutButton" align="center"><button type="button" class="btn btn-default" {{action "logout"}}>Sign out</button></li>
+                  </ul>
+              </div>
           {{else}}
-              Hi {{base-service.currentUser.firstName}}  <a href="" {{action 'logout'}}>Logout</a>
-
-          {{/unless}}
+              <button type="button" class="btn btn-default navbar-btn navbar-right" id="signInButton">{{#link-to "login"}}Sign in{{/link-to}}</button>
+              <button type="button" class="btn btn-primary navbar-btn navbar-right" id="signUpButton">{{#link-to "register"}}Sign up{{/link-to}}</button>
+          {{/if}}
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
+<div >
     {{outlet}}
 </div>

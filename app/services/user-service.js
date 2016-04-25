@@ -19,7 +19,16 @@ export default base.extend({
       method: 'GET',
       url: '/v1/getCurrentUser',
       contentType: "application/json",
+    });
+  },
 
+  registerUser: function (user) {
+    return this.ajax({
+      method: 'POST',
+      url: '/v1/registration',
+      contentType: "application/json",
+      dataType: 'json',
+      data: JSON.stringify(user),
     });
   },
 
@@ -29,13 +38,16 @@ export default base.extend({
 
   setCurrentUserToken: function (token) {
     window.localStorage.setItem('USER-ACCESS-TOKEN', token);
-    localStorage.setItem('USER-ACCESS-TOKEN', token);
     this.set('authToken', token);
-    alert("Inside user-service, token is "+token);
   },
 
   removeCurrentUserToken: function () {
     localStorage.removeItem('USER-ACCESS-TOKEN');
     this.set('authToken', null);
+  },
+
+  removeCurrentUser: function () {
+    this.set('currentUser', null);
   }
 });
+
