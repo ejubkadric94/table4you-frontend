@@ -14,6 +14,10 @@ export default base.extend({
     });
   },
 
+  getUser: function () {
+    return this.get('currentUser');
+  },
+
   getCurrentUser: function () {
     return this.ajax({
       method: 'GET',
@@ -39,6 +43,10 @@ export default base.extend({
   setCurrentUserToken: function (token) {
     window.localStorage.setItem('USER-ACCESS-TOKEN', token);
     this.set('authToken', token);
+  },
+
+  getToken: function () {
+    return window.localStorage.getItem('USER-ACCESS-TOKEN');
   },
 
   removeCurrentUserToken: function () {

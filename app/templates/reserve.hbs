@@ -1,0 +1,69 @@
+<div class="container">
+    <h1>Complete your reservation</h1>
+
+    <div id="reservationRestaurantImage">
+        <img src={{model.image}} alt={{model.name}} >
+    </div>
+
+    {{ui-success-component message=successMessage}}
+
+    {{ui-information-component errorMessage=error}}
+
+
+
+    {{#if currentUser}}
+        <div id="reservationRoute">
+            <form  {{action 'finishReservation' on="submit"}}>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="control-group col-lg-6 col-md-8 col-sm-12 col-xs-12 inputField">
+                        <label>Number of guests:</label>
+                        <div class="controls">
+                            <input value={{guestCount}} type="number" min="1" class="form-control "  placeholder="Number of guests"  required=true  onchange={{action "modifyGuestCount" value="target.value"}}>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-lg visible-md"></div>
+
+                    <div class=" col-lg-6 col-md-8 col-sm-12 col-xs-12 inputField">
+                        <label>Date:</label>
+                        <div class="controls">
+                            <input value={{date}} type="date" class="form-control inputField"  placeholder="Date" required=true onchange={{action "modifyDate" value="target.value"}}>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-lg visible-md"></div>
+
+                    <div class=" col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                        <label>Time:</label>
+                        <div class="controls">
+                            <input value={{time}} type="time" class="form-control inputField"  placeholder="time" required=true onchange={{action "modifyTime" value="target.value"}}>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-lg visible-md"></div>
+
+                    <div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="controls">
+                            <div class="form-group">
+                                <label>Note:</label>
+                                <textarea class="form-control inputField" rows="5" id="note" value=note placeholder="Write your comment..." onchange={{action "modifyNote" value="target.value"}}></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <button type="submit" class="btn-success btn-lg">Make reservation</button>
+                </div>
+            </form>
+        </div>
+    {{else}}
+      {{ui-information-component errorMessage="In order to make a reservation you have to be logged in!"}}
+    {{/if}}
+
+
+
+</div>
+
+
+{{outlet}}

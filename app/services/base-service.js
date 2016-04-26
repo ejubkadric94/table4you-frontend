@@ -4,10 +4,6 @@ export default Ember.Service.extend({
     authToken: null,
     currentUser: null,
 
-    setAuthToken: function (token) {
-      this.set('authToken', token);
-    },
-
     ajax: function(params) {
       if(this.get('authToken')){
         Ember.merge(params,{

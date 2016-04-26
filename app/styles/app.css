@@ -1,7 +1,5 @@
 #restaurant{
   border: 5px solid white;
-  background: #dddddd;
-  border-radius: 25px;
   max-width: 280px;
 }
 
@@ -61,6 +59,8 @@
   width: 100%;
   min-height: 300px;
   margin-top: 0px;
+  color: white;
+  position: relative;
 }
 
 .navbar {
@@ -68,3 +68,133 @@
   background-color: white;
 }
 
+#topImageReservation {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+}
+
+.form-control {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#reservationDiv {
+  margin-left: 0px;
+}
+
+#mainContainer {
+  margin-top: 15px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: lightgrey; /* old IE */
+  background-color: lightgrey; /* Modern Browsers */
+}
+
+.inputField {
+
+}
+
+#reservationRoute {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#reserveNowLink a:link {
+  color: red;
+}
+
+/* visited link */
+#reserveNowLink a:visited {
+  color: red;
+}
+
+/* mouse over link */
+#reserveNowLink a:hover {
+  color: red;
+}
+
+/* selected link */
+#reserveNowLink a:active {
+  color: red;
+}
+
+#reservationRestaurantImage {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#reservationRestaurantImage img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+
+.glyphicon-refresh-animate {
+  -animation: spin .7s infinite linear;
+  -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg);}
+  to { transform: scale(1) rotate(360deg);}
+}
+
+.loading {
+
+}
+
+#allRestaurantsContainer {
+
+}
+
+#linkToAllRestaurants a:link {
+  color: white;
+}
+#linkToAllRestaurants a:visited {
+  color: white;
+}
+#linkToAllRestaurants a:hover {
+  color: white;
+}
+#linkToAllRestaurants a:active {
+  color: white;
+}
+
+#allRestaurantsContainer{
+  margin-top: 10px;
+
+}
+
+#eachRestaurant {
+  border: solid grey 1px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#reservationUnable {
+  margin-top: 16px;
+}
+
+#restaurantReservations {
+
+}
+
+#topRestaurantImage {
+  width: 100%;
+  height: 300px;
+  margin-top: 0px;
+  position: relative;
+}

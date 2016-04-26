@@ -1,0 +1,40 @@
+<div class="container" id="allRestaurantsContainer">
+    {{#each model as |restaurant|}}
+      <div id="eachRestaurant">
+          <div class="col-lg-6 col-md-6 col-sm-12 visible-lg visible-md visible-sm" id="restaurantPicture">
+              {{#link-to "singleRestaurant" restaurant.restaurantId }}<img src={{restaurant.image}}  alt={{restaurant.name}} width="340" height="260" align="center">{{/link-to}}
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 visible-lg visible-md visible-sm visible-xs" id="restaurantInfo">
+              <label><b>Name: </b></label>
+              {{#link-to "singleRestaurant" restaurant.restaurantId }}{{restaurant.name}}{{/link-to}}<br>
+              <b>Street: </b> {{restaurant.address.streetName}}<br>
+              <b>City: </b> {{restaurant.address.city}}<br>
+              <b>Country: </b>{{restaurant.address.country}}<br>
+              <b>Phone: </b> {{restaurant.phone}}<br>
+              <b>Working hours: </b>{{restaurant.workingHours}}<br>
+              <b>Rating: </b> {{restaurant.rating}}<br>
+
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 visible-lg visible-md visible-sm visible-xs" id="restaurantReservations">
+              {{#link-to "reserve" (query-params restaurantId=restaurant.restaurantId id="reserveNowLink")}}<button type="button" class="btn btn-primary">Reserve now</button>{{/link-to}}
+              {{#if currentUser}}
+                  <div>
+                      <div id="restaurantReservations">
+                          AAAAA
+                      </div>
+                  </div>
+              {{else}}
+                <br>
+                  <div class="alert alert-warning" id="reservationUnable">
+                      <strong>Warning!</strong> Please sign in to view the reservations!
+                  </div>
+              {{/if}}
+          </div>
+          <div class="clearfix visible-lg visible-md visible-sm"></div>
+      </div>
+    {{/each}}
+</div>
+
+
+
+

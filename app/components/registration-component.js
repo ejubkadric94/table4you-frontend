@@ -29,12 +29,11 @@ export default Ember.Component.extend({
         }).done(function() {
           this.sendAction('on-register');
         }.bind(this)).fail(function(response) {
-          this.sendAction('on-error', response.responseJSON.error);
-
+          this.set('registrationError', response.responseJSON.error);
         }.bind(this));
       } else {
         this.sendAction('on-error');
-        alert("action is sent");
+        this.set('registrationError', "Invalid input, please fix it!");
       }
     }
   },

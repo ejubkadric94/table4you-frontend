@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   ajax: Ember.inject.service('restaurants-service'),
+  restaurantId: null,
 
-  model: function () {
+  model: function() {
     return this.get('ajax').getAllRestaurants();
   },
+  
 });

@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   ajax: Ember.inject.service('user-service'),
-  registrationError: "TEST",
+  registrationError: null,
   actions: {
     onRegister: function () {
       this.transitionTo('information');
