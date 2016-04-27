@@ -1,14 +1,21 @@
 {{yield}}
-{{#each model as |restaurant|}}
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="restaurant">
-      {{#link-to "singleRestaurant" restaurant.restaurantId }} <img src={{restaurant.image}} class="img-rounded" alt={{restaurant.name}} width="240" height="160" align="center">
-      {{/link-to}}
-      {{#link-to "singleRestaurant" restaurant.restaurantId }} <p><b>{{restaurant.name}}</b></p> {{/link-to}}
-        <p>{{restaurant.address.city}}</p>
-        <p>{{restaurant.address.country}}</p>
+
+{{#if isLoading}}
+  {{loading-component}}
+{{else}}
+  {{#each model as |restaurant|}}
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="restaurant">
+        {{#link-to "singleRestaurant" restaurant.restaurantId }} <img src={{restaurant.image}} class="img-rounded" alt={{restaurant.name}} width="240" height="160" align="center">
+        {{/link-to}}
+        {{#link-to "singleRestaurant" restaurant.restaurantId }} <p><b>{{restaurant.name}}</b></p> {{/link-to}}
+          <p>{{restaurant.address.city}}</p>
+          <p>{{restaurant.address.country}}</p>
         {{#link-to "reserve" (query-params restaurantId=restaurant.restaurantId id="reserveNowLink")}}RESERVE NOW{{/link-to}}
-    </div>
-{{/each}}
+      </div>
+  {{/each}}
+{{/if}}
+
+
 
 
 

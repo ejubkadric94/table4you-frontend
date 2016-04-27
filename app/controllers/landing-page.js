@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     restaurantId: 1,
+
     actions: {
       makeReservation: function () {
         this.transitionToRoute('reserve', { queryParams: {

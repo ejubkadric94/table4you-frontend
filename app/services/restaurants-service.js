@@ -1,7 +1,11 @@
 import base from './base-service';
+import Ember from 'ember';
 
 
 export default base.extend({
+  authToken: Ember.computed.alias('userService.authToken'),
+
+  userService: Ember.inject.service('user-service'),
     getRestaurant: function (id) {
         return this.ajax({
             method: 'GET',
@@ -33,9 +37,6 @@ export default base.extend({
       return this.ajax({
         method: 'GET',
         url: '/v1/restaurants/' + restaurantId + '/reservations',
-        headers: {
-          "USER-ACCESS-TOKEN": token,
-        },
       });
     }
 });

@@ -198,3 +198,31 @@ hr {
   margin-top: 0px;
   position: relative;
 }
+
+.navbar {
+
+}
+
+.body{
+  background-color: yellow;
+}
+
+.showSingleReservations{
+  border-radius: 2px;
+  border: solid grey 1px;
+  margin: 2px;
+  width: 270px;
+  background-color: #C3E1EB;
+}
+
+.showSingleReservations label{
+  color: black;
+}
+
+#reserveInSingleRest {
+  margin: 10px;
+}
+
+#loginContainer {
+  width: 50%;
+}

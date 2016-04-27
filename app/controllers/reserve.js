@@ -26,8 +26,10 @@ export default Ember.Controller.extend({
       },
       this.get('ajax').getToken()).done(function() {
         this.set('successMessage', 'Your reservation was successful. Thank you for using our services!');
+        this.set('error', null);
       }.bind(this)).fail(function(response) {
         this.set('error', "Invalid input");
+        this.set('successMessage', null);
       }.bind(this));
     },
     modifyDate: function (date) {
@@ -48,6 +50,5 @@ export default Ember.Controller.extend({
     var dateValues = date.split('-');
     return dateValues[2] + '/' + dateValues[1]+ '/'+dateValues[0] + ' ' + time + ":00";
   },
-
-
+  
 });

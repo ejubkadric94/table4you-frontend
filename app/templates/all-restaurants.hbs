@@ -20,7 +20,9 @@
               {{#if currentUser}}
                   <div>
                       <div id="restaurantReservations">
-                          AAAAA
+                          <br>
+                        {{#link-to "singleRestaurant" restaurant.restaurantId }}<button type="button" class="btn btn-primary">See reservations</button>{{/link-to}}
+
                       </div>
                   </div>
               {{else}}

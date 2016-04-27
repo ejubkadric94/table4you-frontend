@@ -15,5 +15,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="node_modules table4you" level="project" />
     <orderEntry type="library" name="bower_components table4you" level="project" />
+    <orderEntry type="library" name="node_modules praksa_FrontEnd" level="project" />
+    <orderEntry type="library" name="bower_components praksa_FrontEnd" level="project" />
   </component>
 </module>

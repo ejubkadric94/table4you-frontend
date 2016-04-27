@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{bower_components table4you, node_modules table4you}" />
+    <file url="PROJECT" libraries="{bower_components praksa_FrontEnd, bower_components table4you, node_modules praksa_FrontEnd, node_modules table4you}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
   </component>
 </project>

@@ -5,6 +5,15 @@ export default Ember.Route.extend({
   restaurantId: null,
 
   model: function(params) {
-    return this.get('ajax').getRestaurant(params.restaurantId);
+    var resaurantPromise = this.get('ajax').getRestaurant(params.restaurantId);
+    var reservationsPromise = this.get('ajax').getAllReservations(params.restaurantId, this.get);
+
+    return Ember.$.when(resaurantPromise, reservationsPromise)
+      .then(function (restaurant, reservations) {
+        return {
+          restaurant: restaurant[0],
+          reservations: reservations[0]
+        };
+      });
   },
 });
