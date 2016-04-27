@@ -1,29 +1,29 @@
-<div id="topImage">
+<div id="topImage" class="visible-lg visible-md">
 
     <div class="container" id="topImageReservation">
         <h1>Make a free reservation</h1>
 
         <div id="reservationDiv">
             <form  {{action 'makeReservation' on="submit"}}>
-                <div class="control-group col-lg-2">
+                <div class="control-group col-lg-2 col-md-2">
                     <div class="controls">
                       {{input value=guestCount type="number" min="1" class="form-control "  placeholder="Number of guests"  required=true }}
                     </div>
                 </div>
 
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-2">
                     <div class="controls">
                       {{input value=date type="date" class="form-control "  placeholder="Date" required=true }}
                     </div>
                 </div>
 
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-2">
                     <div class="controls">
                       {{input value=time type="time" class="form-control "  placeholder="time" required=true }}
                     </div>
                 </div>
 
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-2">
                     <div class="controls">
                         <select class="form-control" onchange={{action "selectRestaurant" value="target.value"}}>
                           {{#each model as |restaurant|}}
@@ -32,7 +32,7 @@
                         </select>
                     </div>
                 </div>
-                <button type="submit" class="btn">Make reservation</button>
+                <button type="submit" class="btn" id="landingPageReservationButton">Make reservation</button>
             </form>
         </div>
         <div class="clearfix visible-lg visible-md"></div>

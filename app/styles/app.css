@@ -1,6 +1,7 @@
 #restaurant{
   border: 5px solid white;
   max-width: 280px;
+  margin-bottom: 25px;
 }
 
 #signUpButton {
@@ -225,4 +226,15 @@ hr {
 
 #loginContainer {
   width: 50%;
+  margin-top: 70px;
+}
+
+#outerLogin {
+  margin-top: 150px;
+  position: relative;
+  top: 50%;
+}
+
+#landingPageReservationButton{
+  background-color: lightblue;
 }
