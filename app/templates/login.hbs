@@ -1,0 +1,44 @@
+{{outlet}}
+<div class="container" id="outerLogin">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      {{#if error}}
+        {{ui-information-component errorMessage=error}}
+      {{/if}}
+
+      {{#if isLoading}}
+        {{loading-component}}
+      {{else}}
+          <center>
+              <div id="loginContainer">
+                  <form  {{action 'loginAction' on="submit"}} align="center">
+                      <div class="control-group">
+                          <div class="control-label">
+                              <label>Email</label>
+                          </div>
+
+                          <div class="controls">
+                            {{input value=loginEmail type="text" class="form-control "  placeholder="Email"  required=true }}
+                          </div>
+                      </div>
+
+                      <div >
+                          <div class="control-label">
+                              <label>Password</label>
+                          </div>
+
+                          <div class="controls">
+                            {{input value=loginPassword type="password" class="form-control "  placeholder="Password" required=true }}
+                          </div>
+                      </div>
+
+                      <br>
+
+                      <button type="submit" class="btn">Log in!</button>
+                  </form>
+              </div>
+          </center>
+
+      {{/if}}
+    </div>
+</div>

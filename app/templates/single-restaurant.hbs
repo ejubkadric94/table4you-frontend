@@ -1,0 +1,50 @@
+<div class="container">
+  <img id="topRestaurantImage" src={{model.restaurant.image}} >
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " id="restaurantInfo">
+        <h2>{{model.restaurant.name}}</h2>
+        <b>Street: </b> {{model.restaurant.address.streetName}}<br>
+        <b>City: </b> {{model.restaurant.address.city}}<br>
+        <b>Country: </b>{{model.restaurant.address.country}}<br>
+        <b>Phone: </b> {{model.restaurant.phone}}<br>
+        <b>Working hours: </b>{{model.restaurant.workingHours}}<br>
+        <b>Rating: </b> {{model.restaurant.rating}}<br>
+        <b>Deals: </b> {{model.restaurant.deals}}<br>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="reserveInSingleRest">
+      {{#link-to "reserve" (query-params restaurantId=model.restaurant.restaurantId)}}<button type="button" class="btn btn-primary btn-lg">Reserve now</button>{{/link-to}}
+
+    </div>
+
+
+
+
+    <div id="allReservation" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+        <hr>
+        <h3>Reservations</h3>
+        <div id="reservationsContainer">
+
+            {{#if model.reservations}}
+              {{#each model.reservations as |reservation|}}
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 showSingleReservations">
+                      <label>Reservation ID: </label> {{reservation.reservationId}} <br>
+                      <label>Number of guests: </label> {{reservation.guestCount}} <br>
+                      <label>Date and time: </label> {{reservation.dateTime}} <br>
+                      <label>Note: </label>
+                    {{#if reservation.note}}
+                        <i>"{{reservation.note}}"</i>
+                    {{else}}
+                        User did not leave any note!
+                    {{/if}}
+                  </div>
+              {{/each}}
+            {{else}}
+                <div class="alert alert-info">
+                    <strong>Info!</strong> There are no reservations made for this restaurant.
+                </div>
+            {{/if}}
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div id="topImage" class="visible-lg visible-md">
+
+    <div class="container" id="topImageReservation">
+        <h1>Make a free reservation</h1>
+
+        <div id="reservationDiv">
+            <form  {{action 'makeReservation' on="submit"}}>
+                <div class="control-group col-lg-2 col-md-2">
+                    <div class="controls">
+                      {{input value=guestCount type="number" min="1" class="form-control "  placeholder="Number of guests"  required=true }}
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2">
+                    <div class="controls">
+                      {{input value=date type="date" class="form-control "  placeholder="Date" required=true }}
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2">
+                    <div class="controls">
+                      {{input value=time type="time" class="form-control "  placeholder="time" required=true }}
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2">
+                    <div class="controls">
+                        <select class="form-control" onchange={{action "selectRestaurant" value="target.value"}}>
+                          {{#each model as |restaurant|}}
+                              <option value={{restaurant.restaurantId}}>{{restaurant.name}}</option>
+                          {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn" id="landingPageReservationButton" style="color:black"><b>Make reservation</b></button>
+            </form>
+        </div>
+        <div class="clearfix visible-lg visible-md"></div>
+        <p id="linkToAllRestaurants">{{#link-to "allRestaurants"}}View all restaurants{{/link-to}}</p>
+    </div>
+</div>
+
+<div class="container" id="mainContainer">
+    <h3>Popular restaurants</h3>
+    <hr>
+
+
+
+  {{#each model as |restaurant|}}
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="restaurant">
+        {{#link-to "singleRestaurant" restaurant.restaurantId }} <img src={{restaurant.image}} class="img-rounded" alt={{restaurant.name}} width="240" height="160" align="center">
+        {{/link-to}}
+        {{#link-to "singleRestaurant" restaurant.restaurantId }} <p><b>{{restaurant.name}}</b></p> {{/link-to}}
+          <p>{{restaurant.address.city}}</p>
+          <p>{{restaurant.address.country}}</p>
+        {{#link-to "reserve" (query-params restaurantId=restaurant.restaurantId id="reserveNowLink")}}RESERVE NOW{{/link-to}}
+      </div>
+  {{/each}}
+
+
+</div>

@@ -1,0 +1,12 @@
+{{#each model as |restaurant|}}
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="restaurant">
+        <img src={{restaurant.image}} class="img-rounded" alt={{restaurant.name}} width="240" height="160" align="center">
+        <p><b>{{restaurant.name}}</b></p>fds
+        <p>{{restaurant.address.city}}</p>
+        <p>{{restaurant.address.country}}</p>
+      {{#link-to "reserve" (query-params restaurantId=restaurantId)}}RESERVE NOW{{/link-to}}
+        asdas
+    </div>
+{{/each}}
+
+{{outlet}}

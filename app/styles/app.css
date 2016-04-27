@@ -1,0 +1,253 @@
+#restaurant{
+  border: 5px solid white;
+  max-width: 280px;
+  margin-bottom: 25px;
+}
+
+#signUpButton {
+  margin-right: 5px;
+}
+
+#signUpButton a:link {
+  color: white;
+}
+
+/* visited link */
+#signUpButton a:visited {
+  color: white;
+}
+
+/* mouse over link */
+#signUpButton a:hover {
+  color: white;
+}
+
+/* selected link */
+#signUpButton a:active {
+  color: white;
+}
+
+#signInButton a:link {
+  color: black;
+}
+
+/* visited link */
+#signInButton a:visited {
+  color: black;
+}
+
+/* mouse over link */
+#signInButton a:hover {
+  color: black;
+}
+
+/* selected link */
+#signInButton a:active {
+  color: black;
+}
+
+#logoutDropdown {
+  margin-top: 7px;
+}
+
+#signOutButton {
+  align-content: center;
+  align-items: center;
+}
+
+#topImage {
+  background-image: url("http://www.bluekamloops.ca/uploads/general/Blue_PromoVideoStillShots_Jan2014_02.jpg");
+  width: 100%;
+  min-height: 300px;
+  margin-top: 0px;
+  color: white;
+  position: relative;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: white;
+}
+
+#topImageReservation {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+}
+
+.form-control {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#reservationDiv {
+  margin-left: 0px;
+}
+
+#mainContainer {
+  margin-top: 15px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: lightgrey; /* old IE */
+  background-color: lightgrey; /* Modern Browsers */
+}
+
+.inputField {
+
+}
+
+#reservationRoute {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#reserveNowLink a:link {
+  color: red;
+}
+
+/* visited link */
+#reserveNowLink a:visited {
+  color: red;
+}
+
+/* mouse over link */
+#reserveNowLink a:hover {
+  color: red;
+}
+
+/* selected link */
+#reserveNowLink a:active {
+  color: red;
+}
+
+#reservationRestaurantImage {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#reservationRestaurantImage img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+
+.glyphicon-refresh-animate {
+  -animation: spin .7s infinite linear;
+  -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg);}
+  to { transform: scale(1) rotate(360deg);}
+}
+
+.loading {
+
+}
+
+#allRestaurantsContainer {
+
+}
+
+#linkToAllRestaurants a:link {
+  color: white;
+}
+#linkToAllRestaurants a:visited {
+  color: white;
+}
+#linkToAllRestaurants a:hover {
+  color: white;
+}
+#linkToAllRestaurants a:active {
+  color: white;
+}
+
+#allRestaurantsContainer{
+  margin-top: 10px;
+
+}
+
+#eachRestaurant {
+  border: solid grey 1px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#reservationUnable {
+  margin-top: 16px;
+}
+
+#restaurantReservations {
+
+}
+
+#topRestaurantImage {
+  width: 100%;
+  height: 300px;
+  margin-top: 0px;
+  position: relative;
+}
+
+.navbar {
+
+}
+
+.body{
+  background-color: yellow;
+}
+
+.showSingleReservations{
+  border-radius: 2px;
+  border: solid grey 1px;
+  margin: 2px;
+  width: 270px;
+  background-color: #C3E1EB;
+}
+
+.showSingleReservations label{
+  color: black;
+}
+
+#reserveInSingleRest {
+  margin: 10px;
+}
+
+#loginContainer {
+  width: 50%;
+  margin-top: 70px;
+}
+
+#outerLogin {
+  margin-top: 150px;
+  position: relative;
+  top: 50%;
+}
+
+#landingPageReservationButton{
+  background-color: lightblue;
+}
+
+#reservationDiv a:link{
+  color: black;
+}
+#reservationDiv a:active{
+  color: darkslategray;
+}
+#reservationDiv a:hover{
+  color: black;
+}
+#reservationDiv a:visited{
+  color: black;
+}
