@@ -20,6 +20,13 @@ export default base.extend({
       });
     },
 
+    getAllRestaurantsOrdered: function() {
+      return this.ajax({
+        method: 'GET',
+        url: '/v1/restaurants?order=name',
+      });
+    },
+
     makeReservation: function (restaurantId, reservation, token) {
       return this.ajax({
         method: 'POST',

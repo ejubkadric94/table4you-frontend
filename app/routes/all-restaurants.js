@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   restaurantId: null,
 
   model: function() {
-    return this.get('ajax').getAllRestaurants();
+    return this.get('ajax').getAllRestaurantsOrdered();
   },
-  
+
 });

@@ -238,3 +238,16 @@ hr {
 #landingPageReservationButton{
   background-color: lightblue;
 }
+
+#reservationDiv a:link{
+  color: black;
+}
+#reservationDiv a:active{
+  color: darkslategray;
+}
+#reservationDiv a:hover{
+  color: black;
+}
+#reservationDiv a:visited{
+  color: black;
+}
